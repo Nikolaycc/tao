@@ -1,0 +1,10 @@
+[package]
+name = "tao"
+version = "0.1.0"
+edition = "2021"
+author = "NikolayKYS"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+termion = "1.5.6"
