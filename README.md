@@ -1,7 +1,7 @@
-## Tao
-Paint in your terminal 🎨
+# Tao
+<center>Paint in your terminal 🎨</center>
 
-# Screenshot
+## Screenshot
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
 
 ## Build
@@ -12,7 +12,7 @@ $ cd tao
 $ cargo build && ./target/debug/tao
 ```
 
-## Contributing
+# Contributing
 
 1. Fork it (<https://github.com/NikolayKYS/tao/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -20,7 +20,7 @@ $ cargo build && ./target/debug/tao
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-## Contributors
+# Contributors
 
 - [NikolayKYS](https://github.com/NikolayKYS) - creator and maintainer
 
