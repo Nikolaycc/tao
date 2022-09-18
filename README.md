@@ -2,7 +2,7 @@
  Paint in your terminal 🎨
 
 ## Screenshot
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![screenshot](https://github.com/NikolayKYS/tao/blob/main/image.png)
 
 ## Build
 
