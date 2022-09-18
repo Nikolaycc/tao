@@ -1,5 +1,5 @@
 # Tao
-## Paint in your terminal 🎨
+ Paint in your terminal 🎨
 
 ## Screenshot
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
