@@ -50,7 +50,7 @@ fn main() {
 
     write!(
         stdout,
-        "{}{}{}q to exit. Terminal Size x: {}, y: {}{} {}Pick Color:{} {}  {} Red(r)  {} {}  {}   {}Blue(t){}   {}  {}   {}Green(y){}   {}  {}  {} White(e){}   {}  {}  {} eraser(u)  {} {}",
+        "{}{}{}q to exit. Terminal Size x: {}, y: {}{} {}Pick Color:{} {}  {} Red(r)  {} {}  {}   {}Blue(t){}   {}  {}   {}Green(y){}   {}  {}  {} White(e){}   {}  {}  {} eraser(u)  {} {} {}",
         termion::clear::All,
         termion::cursor::Goto(1, 1),
         termion::color::Bg(termion::color::LightBlack),
@@ -79,7 +79,7 @@ fn main() {
         termion::color::Fg(termion::color::Black),
         termion::color::Fg(termion::color::Reset),
         termion::color::Bg(termion::color::Reset),
-
+        termion::cursor::Hide
     )
     .unwrap();
     stdout.flush().unwrap();
@@ -88,9 +88,16 @@ fn main() {
         let evt = c.unwrap();
         match evt {
             Event::Key(Key::Char('q')) => {
-                write!(stdout, "{}", termion::clear::All);
+                write!(
+                    stdout,
+                    "{} {} {}",
+                    termion::cursor::Show,
+                    termion::clear::All,
+                    "\x1B[2J\x1B[1;1H"
+                );
                 break;
             }
+
             Event::Key(Key::Char('e')) => {
                 e = false;
                 clsys = ColorPk::E
