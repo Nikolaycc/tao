@@ -50,12 +50,10 @@ fn main() {
 
     write!(
         stdout,
-        "{}{}{}q to exit. Terminal Size x: {}, y: {}{} {}Pick Color:{} {}  {} Red(r)  {} {}  {}   {}Blue(t){}   {}  {}   {}Green(y){}   {}  {}  {} White(e){}   {}  {}  {} eraser(u)  {} {} {}",
+        "{}{}{}q to exit. {} {}Pick Color:{} {}  {} Red(r)  {} {}  {}   {}Blue(t){}   {}  {}   {}Green(y){}   {}  {}  {} White(e){}   {}  {}  {} eraser(u)  {} {} {}",
         termion::clear::All,
         termion::cursor::Goto(1, 1),
         termion::color::Bg(termion::color::LightBlack),
-        size.0,
-        size.1,
         termion::color::Bg(termion::color::Reset),
         termion::style::Bold,
         termion::style::Reset,
