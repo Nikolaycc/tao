@@ -116,39 +116,7 @@ fn main() {
             }
             Event::Key(Key::Char('u')) => e = true,
             Event::Mouse(me) => match me {
-                MouseEvent::Hold(x, y) => {
-                    if y <= 3 {
-                        continue;
-                    } else {
-                        if !e {
-                            write!(
-                                stdout,
-                                "{}{}{} {}",
-                                termion::cursor::Goto(x, y),
-                                termion::style::Bold,
-                                termion::color::Bg(match clsys {
-                                    ColorPk::Red => color::Rgb(255, 0, 0),
-                                    ColorPk::Blue => color::Rgb(0, 0, 255),
-                                    ColorPk::Green => color::Rgb(0, 255, 0),
-                                    ColorPk::E => color::Rgb(255, 255, 255),
-                                }),
-                                termion::style::Reset
-                            )
-                            .unwrap();
-                        } else {
-                            write!(
-                                stdout,
-                                "{}{}{} {}",
-                                termion::cursor::Goto(x, y),
-                                termion::style::Bold,
-                                termion::color::Bg(termion::color::Reset),
-                                termion::style::Reset
-                            )
-                            .unwrap();
-                        }
-                    }
-                }
-                MouseEvent::Press(_, x, y) => {
+                MouseEvent::Hold(x, y) | MouseEvent::Press(_, x, y) => {
                     if y <= 3 {
                         continue;
                     } else {
